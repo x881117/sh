@@ -17,5 +17,5 @@ for f in $(curl -s https://releases.quilibrium.com/qclient-release | grep linux-
     echo "Downloading $f..."
     curl -s -O "https://releases.quilibrium.com/$f"
 done
-chmod +x node-2*
+chmod +x qclient-2*
 echo "Update complete!"
