@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd ~/ceremonyclient/client || exit
+
 # 获取并下载适用于 Linux amd64 的文件
 for f in $(curl -s https://releases.quilibrium.com/qclient-release https://releases.quilibrium.com/release | grep linux-amd64); do
     echo "Processing: $f"
@@ -14,3 +16,4 @@ for f in $(curl -s https://releases.quilibrium.com/qclient-release https://relea
     echo "Downloading: $f"
     curl -s -O "https://releases.quilibrium.com/$f"
 done
+chmod +x qclient-2*
